@@ -12,9 +12,7 @@ function myfun() {
         }
     }
 };
-$(window).on('scroll', function () {
-    console.log($(this).scrollTop());
-});
+
 x = false;
 $(document).scroll(function () {
     var y = $(this).scrollTop();
