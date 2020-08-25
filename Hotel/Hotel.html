@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>OrchidHotel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="Hotel.css">
+    <script src="MKSPORT.js" async></script>
+    <script src="jquery.min.js" async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="Hotel.js" async></script>
+
+    <script async>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() < 80) {
+                $('li.active a').css('color', '');
+                $('#mo').removeClass('importantRule');
+                $('nav').addClass('bg-transparent');
+                $('nav').addClass('p-4');
+                document.getElementById('logo').style.width = "60px";
+                $('nav').addClass('p-4');
+            } else {
+                $('li.active a').css('color', '#e3ac22');
+                $('#mo').addClass('importantRule');
+                $('nav').removeClass('bg-transparent');
+                $('nav').removeClass('p-4');
+                document.getElementById('logo').style.width = "51px";
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="mo">
+        <div class="container">
+            <a class="navbar-brand " href="#">
+                <img style="width: 51px;" src="flower.png" alt="" id="logo">
+            </a>
+            <button class="navbar-toggler" onclick="myfun();" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto text-center">
+                    <li class="nav-item active ">
+                        <a class="nav-link mr-4" href="#" id="one">الرئيسية
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mr-4" href="#" id="one">الغرف
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            الخدمات
+                        </a>
+                        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">المطاعم</a>
+                            <a class="dropdown-item" href="#">المسابح</a>
+                            <a class="dropdown-item" href="#">المنتجع</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-4" href="#services">حول</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-4" href="products.html">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active"
+                    style="background-image: url('https://images.unsplash.com/photo-1495365200479-c4ed1d35e1aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');">
+                    <div class="carousel-caption">
+                        <h2 class="display-4">العديد من الغرف</h2>
+                        <p class="lead">العديد من الغرف خصيصاً لك</p>
+                    </div>
+                </div>
+                <div class="carousel-item"
+                    style="background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')">
+                    <div class="carousel-caption">
+                        <h2 class="display-4">اجمل اطلالة</h2>
+                        <p class="lead">اطلالة على البحر ومناظر خلابة</p>
+                    </div>
+                </div>
+                <div class="carousel-item"
+                    style="background-image: url('https://images.unsplash.com/photo-1444201983204-c43cbd584d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')">
+                    <div class="carousel-caption">
+                        <h2 class="display-4">استمتع بوقت راحتك</h2>
+                        <p class="lead">استمتع بوقت راحتك في فندقنا</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+    <section class="about-us py-5 jumbotron" id="about-us">
+        <div class="container mt-5 pb-md-4">
+            <div class="row">
+                <div class="col-md-6 " id="most">
+                    <div class="imgff container-fluid">
+                        <img id="aboutus" style="width: 525px;" class="lazyload img-fluid" src="img_placeholder5.jpg"
+                            data-src="valeriia-bugaiova-_pPHgeHz1uk-unsplash.jpg" alt="">
+
+                    </div>
+                    <img src="img_placeholder5.jpg" data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg"
+                        class="img-abs img-fluid lazyload" alt="">
+                </div>
+
+                <div class="col-md-6 d-md-none d-block mt-5 " id="abboss">
+                    <h2 style="color: #e3ac22;" class="mt-3">المزيد حول الفندق</h2>
+                    <hr>
+                    <p>فندق سوري تأسس في عام 2002 من قبل المدير محمد عبد الرحمن,لدى المبنى 5 طوابق ويتسع ل100 شخص وايضاً
+                        لدينا العديد من
+                        المزايا والمسابح والمطاعم
+                    </p>
+                    <p>سجل الان واحجز غرفة من افضل الغرف</p>
+                    <button type="button" class="btn" style="background-color: #e3ac22;" data-toggle="modal"
+                        data-target=".bd-example-modal-lg">المزيد من المعلومات حول التصميم الداخلي والخارجي</button>
+                </div>
+                <div class="col-md-6 d-none d-md-block " id="abbos">
+                    <h2 style="color: #e3ac22;" class="mt-3">حول الفندق</h2>
+                    <hr>
+                    <p>فندق سوري تأسس في عام 2002 من قبل المدير محمد عبد الرحمن,لدى المبنى 5 طوابق ويتسع ل100 شخص وايضاً
+                        لدينا العديد من المزايا والمسابح والمطاعم
+                    </p>
+                    <p>سجل الان واحجز غرفة من افضل الغرف</p>
+                    <button type="button" class="btn" style="background-color: #e3ac22;" data-toggle="modal"
+                        data-target=".bd-example-modal-lg">المزيد من المعلومات حول التصميم الداخلي والخارجي</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="btn text-left float-left" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" style="color: #e3ac22;">التصميم الداخلي والخارجي</h5>
+
+                </div>
+                <div class="modal-body ">
+                    <div class="container">
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <img src="img_placeholder5.jpg" data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg"
+                            class="lazyload img-fluid pb-3" alt="">
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container " style="max-width: 100%;">
+        <div class="text-center">
+            <h1 class="section-heading text-uppercase font-weight-lighter my-4">الغرف</h1>
+            <hr style="    width: 50px;
+    background-color: #e3ac22;
+    height: 3px;
+    margin-top: -7px;">
+        </div>
+        <div class="container mt-5">
+            <div class="row" id="items">
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow">
+                        <img class="lazyload img-fluid" src="img_placeholder5.jpg"
+                            data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0 py-3">غرف مطلة عالبحر</h5>
+                            <p>غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
+                            <p class="text-muted">السعر 2000 ليرة سورية في اليوم الواحد</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow">
+                        <img class="lazyload img-fluid" src="img_placeholder5.jpg"
+                            data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0 py-3">غرف مطلة عالبحر</h5>
+                            <p>غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
+                            <p class="text-muted">السعر 2000 ليرة سورية في اليوم الواحد</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow">
+                        <img class="lazyload img-fluid" src="img_placeholder5.jpg"
+                            data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0 py-3">غرف مطلة عالبحر</h5>
+                            <p>غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
+                            <p class="text-muted">السعر 2000 ليرة سورية في اليوم الواحد</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow">
+                        <img class="lazyload img-fluid" src="img_placeholder5.jpg"
+                            data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0 py-3">غرف مطلة عالبحر</h5>
+                            <p>غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
+                            <p class="text-muted">السعر 2000 ليرة سورية في اليوم الواحد</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow">
+                        <img class="lazyload img-fluid" src="img_placeholder5.jpg"
+                            data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0 py-3">غرف مطلة عالبحر</h5>
+                            <p>غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
+                            <p class="text-muted">السعر 2000 ليرة سورية في اليوم الواحد</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow">
+                        <img class="lazyload img-fluid" src="img_placeholder5.jpg"
+                            data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0 py-3">غرف مطلة عالبحر</h5>
+                            <p>غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
+                            <p class="text-muted">السعر 2000 ليرة سورية في اليوم الواحد</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 text-center container-fluid py-2">
+                <button type="button" class="btn" style="background-color: #e3ac22;">عرض كافة الغرف</button> </div>
+        </div>
+
+        <section class="showcase my-5">
+            <div class="text-center">
+                <h1 class="section-heading text-uppercase font-weight-lighter my-4 ">خدماتنا</h1>
+                <hr style="    width: 50px;
+        background-color: #e3ac22;
+        height: 3px;
+        margin-top: -7px;">
+            </div>
+            <div class="container-fluid p-0 my-4">
+                <div class="row no-gutters">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img d-md-block d-none"
+                        style="background-image: url('https://images.unsplash.com/photo-1521305916504-4a1121188589?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80');">
+                    </div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text d-md-block d-none">
+                        <h2>افخر المطاعم</h2>
+                        <p class="lead mb-0">استمتع انت وعائلتك في المطاعم الفاخة مع الطاقم المتميز الذي يلبي كافية
+                            احتياجاتك</p>
+                        <button type="button" class="btn my-3" style="background-color: #e3ac22;;">المزيد من
+                            المعلومات</button>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text d-block d-md-none text-center"
+                        style="background-color: #fcfcfc;">
+                        <div class="p-4">
+                            <img class="img-fluid rounded-circle lazyload"
+                                data-src="https://images.unsplash.com/photo-1521305916504-4a1121188589?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+                                alt="">
+                        </div>
+                        <h2>افخر المطاعم</h2>
+                        <p class="lead mb-0">استمتع انت وعائلتك في المطاعم الفاخة مع الطاقم المتميز الذي يلبي كافية
+                            احتياجاتك</p>
+                        <button type="button" class="btn my-3" style="background-color: #e3ac22;">المزيد من
+                            المعلومات</button>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-lg-6 text-white showcase-img d-md-block d-none"
+                        style="background-image: url('https://images.unsplash.com/photo-1585663696649-cda73a7291f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=837&q=80);"></div>
+                    <div class="col-lg-6 my-auto showcase-text d-md-block d-none">
+                        <h2>افخر المطاعم</h2>
+                        <p class="lead mb-0">استمتع انت وعائلتك في المطاعم الفاخة مع الطاقم المتميز الذي يلبي كافية
+                            احتياجاتك</p>
+                        <button type="button" class="btn my-3" style="background-color: #e3ac22;">المزيد من
+                            المعلومات</button>
+                    </div>
+
+                    <div class="col-lg-6 my-auto showcase-text d-block d-md-none text-center" style="background-color: #fcfcfc;">
+                        <div class="p-4">
+                            <img class="img-fluid rounded-circle lazyload"
+                                data-src="https://images.unsplash.com/photo-1585663696649-cda73a7291f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=837&q=80"
+                                alt="">
+                        </div>
+                        <h2>افخر المسابح على الإطلاق</h2>
+                        <p class="lead mb-0">استمتع بافضل المسابح في هذا الصيف الحار</p>
+                        <button type="button" class="btn my-3" style="background-color: #e3ac22;">المزيد من
+                            المعلومات</button>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img d-md-block d-none"
+                        style="background-image: url('https://images.unsplash.com/photo-1518860308377-800f02d5498a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80');">
+                    </div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text d-md-block d-none">
+                        <h2>افخر المطاعم</h2>
+                        <p class="lead mb-0">استمتع انت وعائلتك في المطاعم الفاخة مع الطاقم المتميز الذي يلبي كافية
+                            احتياجاتك</p>
+                        <button type="button" class="btn my-3" style="background-color: #e3ac22;;">المزيد من
+                            المعلومات</button>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text d-block d-md-none text-center"
+                        style="background-color: #fcfcfc;">
+                        <div class="p-4">
+                            <img class="img-fluid rounded-circle lazyload"
+                                data-src="https://images.unsplash.com/photo-1518860308377-800f02d5498a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+                                alt="">
+                        </div>
+                        <h2>افخر الحمامات وكافة المستلزمات المنزلية</h2>
+                        <p class="lead mb-0">استمتع بأفضل  الغرف المجهزة بأجود الحمامات</p>
+                        <button type="button" class="btn my-3" style="background-color: #e3ac22;">المزيد من
+                            المعلومات</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <br> <br> <br> <br> <br> <br>
+        <br> <br> <br> <br> <br> <br>
+
+        <br> <br> <br> <br> <br> <br>
+
+        <br> <br> <br> <br> <br> <br>
+
+        <br> <br> <br> <br> <br> <br>
+
+
+        <br> <br> <br> <br> <br> <br>
+
+        <br> <br> <br> <br> <br> <br>
+
+        <br> <br> <br> <br> <br> <br>
+
+        <br> <br> <br> <br> <br> <br>
+
+        <br> <br> <br> <br> <br> <br>
+
+        <br> <br> <br> <br> <br> <br>
+
+        <p>asdsadsadasds</p>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var lazyloadImages;
+
+                if ("IntersectionObserver" in window) {
+                    lazyloadImages = document.querySelectorAll(".lazyload");
+                    var imageObserver = new IntersectionObserver(function (entries, observer) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                var image = entry.target;
+                                image.src = image.dataset.src;
+                                image.classList.remove("lazyload");
+                                imageObserver.unobserve(image);
+                            }
+                        });
+                    });
+
+                    lazyloadImages.forEach(function (image) {
+                        imageObserver.observe(image);
+                    });
+                } else {
+                    var lazyloadThrottleTimeout;
+                    lazyloadImages = document.querySelectorAll(".lazyload");
+
+                    function lazyload() {
+                        if (lazyloadThrottleTimeout) {
+                            clearTimeout(lazyloadThrottleTimeout);
+                        }
+
+                        lazyloadThrottleTimeout = setTimeout(function () {
+                            var scrollTop = window.pageYOffset;
+                            lazyloadImages.forEach(function (img) {
+                                if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                                    img.src = img.dataset.src;
+                                    img.classList.remove('lazyload');
+                                }
+                            });
+                            if (lazyloadImages.length == 0) {
+                                document.removeEventListener("scroll", lazyload);
+                                window.removeEventListener("resize", lazyload);
+                                window.removeEventListener("orientationChange", lazyload);
+                            }
+                        }, 20);
+                    }
+
+                    document.addEventListener("scroll", lazyload);
+                    window.addEventListener("resize", lazyload);
+                    window.addEventListener("orientationChange", lazyload);
+                }
+            })
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+        <script>
+            $('.navbar-nav>li>a').on('click', function () {
+                if (!$(this).hasClass('dropdown-toggle'))
+                    $('.navbar-collapse').removeClass('show');
+            });
+        </script>
+</body>
+
+</html>

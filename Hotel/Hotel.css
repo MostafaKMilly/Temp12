@@ -1,0 +1,122 @@
+@font-face {
+  font-family: hanimation;
+  src: url(hanimation-regular.ttf);
+}
+body {
+    font-family:"hanimation";
+    text-align: right;
+}
+.nav-item a {
+    transition: all 0.3s;
+    font-family: "hanimation";
+    
+}
+@media screen and (min-width:1000px) {
+.nav-item a {
+    font-size:large;
+}
+    .nav-item a:hover {
+    border-bottom: 1px solid white;
+    
+} }
+.navbar-collapse {
+  transition: all 0.4s;
+}
+.navbar {
+    transition: all 0.4s;
+}
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#carouselExampleIndicators {
+  transition: all 0.4s;
+}
+.carousel.carousel-fade .carousel-item {
+    display: block;
+    opacity: 0;
+    transition: opacity ease-out 0.5s;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.carousel.carousel-fade .carousel-item.active {
+    opacity: 1 !important;
+}
+.carousel.carousel-fade .carousel-item:first-child {
+    top: auto;
+    position: relative;
+    transition: opacity ease-out 0.5s;
+}
+.carousel.carousel-fade .carousel-item:second-child {
+    top: auto;
+    position: relative;
+    transition: opacity ease-out 0.5ss;
+}
+.carousel-item .img-fluid {
+    margin: 0 auto;
+}
+.carousel img {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.carousel-item {
+   box-shadow: inset 0 0 0 1000px #1d212487;
+}
+.carousel-caption {
+  top: 40%;
+}
+@media screen and (max-width:425px) {
+    .carousel-caption h2 {
+        font-size: 40px;
+    }
+}
+.about-us {
+    transition: all 0.4s;
+}
+.imgff {
+    position: relative;
+    box-sizing: border-box;
+}
+.img-abs {
+    position: absolute;
+    width: 50%;
+
+    right: -15px;
+    border: 7px solid #fff;
+    z-index: 9;
+    bottom: -50px;
+    
+}
+.importantRule { background-color: #1c1e20 !important }
+
+.card img {
+    transition: all 0.4s;
+}
+.card img:hover {
+    opacity: 0.8;
+}
+.section-heading {
+    color: #e3ac22;;
+}
+
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+}
+
