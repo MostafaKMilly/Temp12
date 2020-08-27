@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>OrchidHotel</title>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -44,7 +44,7 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="mo">
         <div class="container">
             <a class="navbar-brand " href="#">
-                <img style="width: 51px;" src="flower.png" alt="" id="logo">
+                <img style="width: 51px;" src="flower.png" alt="" id="logo"> 
             </a>
             <button class="navbar-toggler" onclick="myfun();" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -52,32 +52,61 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="d-md-block d-none">
                 <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item active ">
-                        <a class="nav-link mr-4" href="#" id="one">الرئيسية
+                    <li class="nav-item  ">
+                        <a class="nav-link mr-4" href="" id="one" data-toggle="modal" data-target="#exampleModal">تواصل معنا
                         </a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link mr-4" href="#" id="one">الغرف
-                        </a>
-                    </li>
+                    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             الخدمات
                         </a>
-                        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">المطاعم</a>
-                            <a class="dropdown-item" href="#">المسابح</a>
-                            <a class="dropdown-item" href="#">المنتجع</a>
+                        <div class="dropdown-menu text-center " aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item js-scroll-trigger" href="#resturants">المطاعم</a>
+                            <a class="dropdown-item js-scroll-trigger" href="#swim_pools">المسابح</a>
+                            <a class="dropdown-item js-scroll-trigger" href="#resort">المنتجع</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link mr-4" href="#services">حول</a>
+                    <li class="nav-item ">
+                        <a class="nav-link mr-4 js-scroll-trigger" href="#rooms" id="one">الغرف
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mr-4" href="products.html">تواصل معنا</a>
+                        <a class="nav-link mr-4 js-scroll-trigger" href="#about">حول</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link mr-4 js-scroll-trigger" href="#">الرئيسية</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto text-center">
+                    <li class="nav-item active">
+                        <a class="nav-link mr-4 js-scroll-trigger" href="#">الرئيسية</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mr-4 js-scroll-trigger" href="#rooms" id="one">الغرف
+                        </a>
+                    </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        الخدمات
+                    </a>
+                    <div class="dropdown-menu text-center " aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item js-scroll-trigger" href="#resturants">المطاعم</a>
+                        <a class="dropdown-item js-scroll-trigger" href="#swim_pools">المسابح</a>
+                        <a class="dropdown-item js-scroll-trigger" href="#resort">المنتجع</a>
+                    </div>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-4 js-scroll-trigger" href="#about">حول</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-4" href="" data-toggle="modal" data-target="#exampleModal" >تواصل معنا</a>
                     </li>
                 </ul>
             </div>
@@ -124,7 +153,8 @@
             </a>
         </div>
     </header>
-    <section class="about-us py-5 jumbotron" id="about-us">
+    
+    <section class="about-us py-5 jumbotron" id="about">
         <div class="container mt-5 pb-md-4">
             <div class="row">
                 <div class="col-md-6 " id="most">
@@ -137,8 +167,8 @@
                         class="img-abs img-fluid lazyload" alt="">
                 </div>
 
-                <div class="col-md-6 d-md-none d-block mt-5 " id="abboss">
-                    <h2 style="color: #e3ac22;" class="mt-3">المزيد حول الفندق</h2>
+                <div class="col-md-6 d-md-none d-block mt-5 ">
+                    <h2 style="color: #e3ac22;" class="mt-3">حول الفندق</h2>
                     <hr>
                     <p>فندق سوري تأسس في عام 2002 من قبل المدير محمد عبد الرحمن,لدى المبنى 5 طوابق ويتسع ل100 شخص وايضاً
                         لدينا العديد من
@@ -148,7 +178,7 @@
                     <button type="button" class="btn" style="background-color: #e3ac22;" data-toggle="modal"
                         data-target=".bd-example-modal-lg">المزيد من المعلومات حول التصميم الداخلي والخارجي</button>
                 </div>
-                <div class="col-md-6 d-none d-md-block " id="abbos">
+                <div class="col-md-6 d-none d-md-block ">
                     <h2 style="color: #e3ac22;" class="mt-3">حول الفندق</h2>
                     <hr>
                     <p>فندق سوري تأسس في عام 2002 من قبل المدير محمد عبد الرحمن,لدى المبنى 5 طوابق ويتسع ل100 شخص وايضاً
@@ -216,7 +246,7 @@
         </div>
     </div>
     
-    <section class="gallery-block cards-gallery">
+    <section class="gallery-block cards-gallery" id="rooms">
         <div class="container">
             <div class="text-center my-4">
                 <h1 class="section-heading text-uppercase font-weight-lighter ">الغرف</h1>
@@ -233,8 +263,11 @@
                         </a>
                         <div class="card-body">
                         <h5 class="card-title mb-0 py-3">غرف مطلة عالبحر</h5>
-                        <p>غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
+                        <p class="text-dark">غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
                         <p class="text-muted">السعر 2000 ليرة سورية في اليوم الواحد</p>
+                                        <button type="button" class="btn" style="background-color: #e3ac22;" data-toggle="modal"
+                        data-target=".room_one">المزيد من المعلومات</button>
+
                         </div>
                     </div>
                 </div>
@@ -247,8 +280,10 @@
                         </a>
                         <div class="card-body">
                             <h5 class="card-title mb-0 py-3">غرف مميزة</h5>
-                            <p>غرف بجودة عالية و مطلة عالبحر خصيصاً لك</p>
+                        <p class="text-dark">غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
                             <p class="text-muted">السعر 3000 ليرة سورية في اليوم الواحد</p>
+                            <button type="button" class="btn" style="background-color: #e3ac22;" data-toggle="modal" data-target=".room_two">المزيد
+                                من المعلومات</button>
                         </div>
                         
                     </div>
@@ -264,8 +299,10 @@
                         </a>
                         <div class="card-body">
                             <h5 class="card-title mb-0 py-3">غرف مطلة عالبحر</h5>
-                            <p>غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
+                        <p class="text-dark">غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
                             <p class="text-muted">السعر 2000 ليرة سورية في اليوم الواحد</p>
+                            <button type="button" class="btn" style="background-color: #e3ac22;" data-toggle="modal" data-target=".room_three">المزيد
+                                من المعلومات</button>
                         </div>
                     </div>
                 </div>
@@ -279,8 +316,10 @@
                         </a>
                         <div class="card-body">
                             <h5 class="card-title mb-0 py-3">غرف مطلة عالبحر</h5>
-                            <p>غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
+                        <p class="text-dark">غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
                             <p class="text-muted">السعر 2000 ليرة سورية في اليوم الواحد</p>
+                            <button type="button" class="btn" style="background-color: #e3ac22;" data-toggle="modal" data-target=".room_four">المزيد
+                                من المعلومات</button>
                         </div>
                     </div>
                 </div>
@@ -294,8 +333,10 @@
                         </a>
                         <div class="card-body">
                             <h5 class="card-title mb-0 py-3">غرف مطلة عالبحر</h5>
-                            <p>غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
+                        <p class="text-dark">غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
                             <p class="text-muted">السعر 2000 ليرة سورية في اليوم الواحد</p>
+                            <button type="button" class="btn" style="background-color: #e3ac22;" data-toggle="modal" data-target=".room_five">المزيد
+                                من المعلومات</button>
                         </div>
                     </div>
                 </div>
@@ -309,17 +350,17 @@
                         </a>
                         <div class="card-body">
                             <h5 class="card-title mb-0 py-3">غرف مميزة</h5>
-                            <p>غرف بجودة عالية و مطلة عالبحر خصيصاً لك</p>
+                        <p class="text-dark">غرف بجودة عالية مطلة عالبحر خصيصاً لك</p>
                             <p class="text-muted">السعر 3000 ليرة سورية في اليوم الواحد</p>
+                            <button type="button" class="btn" style="background-color: #e3ac22;" data-toggle="modal" data-target=".room_six">المزيد
+                                من المعلومات</button>
                         </div>
                     </div>
                 </div>
                 
                 </div>
             </div>
-            <div class="w-100 text-center container-fluid py-2">
-                <button type="button" class="btn" style="background-color: #e3ac22;">عرض كافة الغرف</button> </div>
-        </div>
+            
     </section>
 
         <section class="showcase mt-5">
@@ -332,7 +373,7 @@
         class="mb-4">
             </div>
             <div class="container-fluid p-0 my-3">
-                <div class="row no-gutters">
+                <div class="row no-gutters" id="resturants">
                     <div class="col-lg-6 order-lg-2 text-white showcase-img d-md-block d-none"
                         style="background-image: url('https://images.unsplash.com/photo-1521305916504-4a1121188589?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80');">
                     </div>
@@ -340,10 +381,11 @@
                         <h2>افخر المطاعم</h2>
                         <p class="lead mb-0">استمتع انت وعائلتك في المطاعم الفاخة مع الطاقم المتميز الذي يلبي كافية
                             احتياجاتك</p>
-                        <button type="button" class="btn my-3" style="background-color: #e3ac22;;">المزيد من
+                        <button type="button" class="btn my-3" onClick="javascript:window.open('resturants.html', '_blank');"
+                            style="background-color: #e3ac22;">المزيد من
                             المعلومات</button>
                     </div>
-                    <div class="col-lg-6 order-lg-1 my-auto showcase-text d-block d-md-none text-center"
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text d-block d-md-none text-center" 
                         style="background-color: #fcfcfc;">
                         <div class="p-4">
                             <img class="img-fluid rounded-circle lazyload"
@@ -352,23 +394,23 @@
                         </div>
                         <h2>افخر المطاعم</h2>
                         <p class="lead mb-0">استمتع انت وعائلتك في المطاعم الفاخة مع الطاقم المتميز الذي يلبي كافية
-                            احتياجاتك</p>
-                        <button type="button" class="btn my-3" style="background-color: #e3ac22;">المزيد من
+                            احتياجاتك</p> 
+                        <button type="button" class="btn my-3" onClick="javascript:window.open('resturants.html', '_blank');" style="background-color: #e3ac22;">المزيد من
                             المعلومات</button>
                     </div>
                 </div>
-                <div class="row no-gutters">
+                <div class="row no-gutters " id="swim_pools">
                     <div class="col-lg-6 text-white showcase-img d-md-block d-none"
                         style="background-image: url('https://images.unsplash.com/photo-1585663696649-cda73a7291f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=837&q=80);"></div>
                     <div class="col-lg-6 my-auto showcase-text d-md-block d-none">
-                        <h2>افخر المطاعم</h2>
-                        <p class="lead mb-0">استمتع انت وعائلتك في المطاعم الفاخة مع الطاقم المتميز الذي يلبي كافية
-                            احتياجاتك</p>
-                        <button type="button" class="btn my-3" style="background-color: #e3ac22;">المزيد من
+                        <h2>افخر المسابح على الإطلاق</h2>
+                        <p class="lead mb-0">استمتع بافضل المسابح في هذا الصيف الحار</p>
+                        <button type="button" class="btn my-3" onClick="javascript:window.open('swimpools.html', '_blank');"
+                            style="background-color: #e3ac22;">المزيد من
                             المعلومات</button>
                     </div>
 
-                    <div class="col-lg-6 my-auto showcase-text d-block d-md-none text-center" style="background-color: #fcfcfc;">
+                    <div class="col-lg-6 my-auto showcase-text d-block d-md-none text-center" style="background-color: #fcfcfc;" >
                         <div class="p-4">
                             <img class="img-fluid rounded-circle lazyload"
                                 data-src="https://images.unsplash.com/photo-1585663696649-cda73a7291f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=837&q=80"
@@ -376,18 +418,20 @@
                         </div>
                         <h2>افخر المسابح على الإطلاق</h2>
                         <p class="lead mb-0">استمتع بافضل المسابح في هذا الصيف الحار</p>
-                        <button type="button" class="btn my-3" style="background-color: #e3ac22;">المزيد من
+                        <button type="button" class="btn my-3" onClick="javascript:window.open('swimpools.html', '_blank');"
+                            style="background-color: #e3ac22;">المزيد من
                             المعلومات</button>
                     </div>
                 </div>
-                <div class="row no-gutters">
+                <div class="row no-gutters" id="resort">
                     <div class="col-lg-6 order-lg-2 text-white showcase-img d-md-block d-none"
                         style="background-image: url('https://images.unsplash.com/photo-1518860308377-800f02d5498a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80');">
                     </div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text d-md-block d-none">
-                        <h2>افخر الحمامات وكافة المستلزمات المنزلية</h2>
-                        <p class="lead mb-0">استمتع بأفضل الغرف المجهزة بأجود الحمامات</p>
-                        <button type="button" class="btn my-3" style="background-color: #e3ac22;;">المزيد من
+                        <h2>افخر منتجع خصيصاً لك</h2>
+                        <p class="lead mb-0">استمتع بأفخر منتجع مجهز بكافة الخدمات خصيصاً لك</p>
+                        <button type="button" class="btn my-3" onClick="javascript:window.open('resort.html', '_blank');"
+                            style="background-color: #e3ac22;">المزيد من
                             المعلومات</button>
                     </div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text d-block d-md-none text-center"
@@ -399,7 +443,8 @@
                         </div>
                         <h2>افخر الحمامات وكافة المستلزمات المنزلية</h2>
                         <p class="lead mb-0">استمتع بأفضل  الغرف المجهزة بأجود الحمامات</p>
-                        <button type="button" class="btn my-3" style="background-color: #e3ac22;">المزيد من
+                        <button type="button" class="btn my-3" onClick="javascript:window.open('resort.html', '_blank');"
+                            style="background-color: #e3ac22;">المزيد من
                             المعلومات</button>
                     </div>
                 </div>
@@ -588,6 +633,43 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">تواصل معنا</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>موقع الفندق</h5>
+                <p>دمشق شرقي التجارة جانب مشفى المدينة</p>
+                <h5>رقم الهاتف</h5>
+                <P>0114425445</P>
+                                    <p>لا تتردد بإرسال رسالة بحال كان لديك مشكلة
+                                    <p>
+
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">:الاسم</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">:المشكلة</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+        </div>
+    </div>
+</div>
     <section id="footer" style=" padding: 40px 0;">
         <div class="container">
             <div class="row text-center text-xs-center text-sm-left text-md-left ">
@@ -612,7 +694,7 @@
                         
                         <li>email:orchidhotel@gmail.com
                         </li>
-                        
+                        <li><button class="btn btn-success" data-toggle="modal" data-target="#exampleModal">ارسل رسالة</button></li>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4 text-white my-md-4">
@@ -651,6 +733,355 @@
             </div>
         </div>
     </section>
+    <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i
+            class="fas fa-chevron-up"></i></a>
+
+
+<!--Rooms Modals-->
+<!--modal for room one-->
+<div class="modal fade room_one" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="btn text-left float-left" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" style="color: #e3ac22;">ملحقات الغرفة</h5>
+
+            </div>
+            <div class="modal-body ">
+                <div class="container">
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <img src="img_placeholder5.jpg" data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg"
+                        class="lazyload img-fluid pb-3" alt="">
+                    <p class="w-100">
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبينص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal for room two-->
+<div class="modal fade room_two" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="btn text-left float-left" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" style="color: #e3ac22;">ملحقات الغرفة</h5>
+
+            </div>
+            <div class="modal-body ">
+                <div class="container">
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <img src="img_placeholder5.jpg" data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg"
+                        class="lazyload img-fluid pb-3" alt="">
+                    <p class="w-100">
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبينص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal for room three-->
+<div class="modal fade room_three" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="btn text-left float-left" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" style="color: #e3ac22;">ملحقات الغرفة</h5>
+
+            </div>
+            <div class="modal-body ">
+                <div class="container">
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <img src="img_placeholder5.jpg" data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg"
+                        class="lazyload img-fluid pb-3" alt="">
+                    <p class="w-100">
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبينص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal for room four-->
+<div class="modal fade room_four" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="btn text-left float-left" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" style="color: #e3ac22;">ملحقات الغرفة</h5>
+
+            </div>
+            <div class="modal-body ">
+                <div class="container">
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <img src="img_placeholder5.jpg" data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg"
+                        class="lazyload img-fluid pb-3" alt="">
+                    <p class="w-100">
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبينص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal for room five-->
+<div class="modal fade room_five" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="btn text-left float-left" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" style="color: #e3ac22;">ملحقات الغرفة</h5>
+
+            </div>
+            <div class="modal-body ">
+                <div class="container">
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <img src="img_placeholder5.jpg" data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg"
+                        class="lazyload img-fluid pb-3" alt="">
+                    <p class="w-100">
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبينص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal for room six-->
+<div class="modal fade room_six" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="btn text-left float-left" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" style="color: #e3ac22;">ملحقات الغرفة</h5>
+
+            </div>
+            <div class="modal-body ">
+                <div class="container">
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <img src="img_placeholder5.jpg" data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg"
+                        class="lazyload img-fluid pb-3" alt="">
+                    <p class="w-100">
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبينص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                        تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+                    <p class="w-100">
+                        اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                        اوركيداوركيد
+                    </p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 var lazyloadImages;
@@ -702,6 +1133,10 @@
                 }
             })
         </script>
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
         <script>
             baguetteBox.run('.cards-gallery', { animation: 'slideIn' });
@@ -720,11 +1155,19 @@
             integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
             crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
         <script>
             $('.navbar-nav>li>a').on('click', function () {
                 if (!$(this).hasClass('dropdown-toggle'))
                     $('.navbar-collapse').removeClass('show');
+               else {
+                   $(".dropdown-menu a").click(function () {
+                        $(this).closest(".dropdown-menu").removeClass('show');
+                        $('.navbar-collapse').removeClass('show');
+                    });
+               }
             });
+            
         </script>
         
 </body>

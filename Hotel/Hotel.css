@@ -2,6 +2,11 @@
   font-family: hanimation;
   src: url(hanimation-regular.ttf);
 }
+@font-face {
+  font-family: BeautifulPeoplePersonalUse;
+  src: url(BeautifulPeoplePersonalUse-PYP2.ttf);
+}
+
 body {
     font-family:"hanimation";
     text-align: right;
@@ -230,7 +235,8 @@ body {
 
 	.gallery-block .transform-on-hover:hover {
 	    transform: translateY(-10px) scale(1.02);
-	    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important; 
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important; 
+      color: #e3ac22;
 	}
 }
 .gallery-block {
@@ -336,3 +342,17 @@ body {
     margin-bottom: 10px;
 }
 }
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+}
+@media (min-width: 768px)
+{
+.navbar-expand-md .navbar-collapse {
+    display: -ms-flexbox!important;
+    display: none!important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+} }

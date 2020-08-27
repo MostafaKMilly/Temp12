@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>OrchidHotel</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+
+    <link rel="stylesheet" href="Hotel.css">
+    <link rel="stylesheet" href="resturants.css">
+    <script src="MKSPORT.js" async></script>
+    <script src="jquery.min.js" async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="Hotel.js" async></script>
+    <script src="resturants.js" async></script>
+    <script async>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() < 80) {
+                $('li.active a').css('color', '');
+                $('#mo').removeClass('importantRule');
+                $('nav').addClass('bg-transparent');
+                $('nav').addClass('p-4');
+                document.getElementById('logo').style.width = "60px";
+                $('nav').addClass('p-4');
+            } else {
+                $('li.active a').css('color', '#e3ac22');
+                $('#mo').addClass('importantRule');
+                $('nav').removeClass('bg-transparent');
+                $('nav').removeClass('p-4');
+                document.getElementById('logo').style.width = "51px";
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="mo">
+        <div class="container">
+            <a class="navbar-brand " href="#">
+                <img style="width: 51px;" src="flower.png" alt="" id="logo">
+            </a>
+            <button class="navbar-toggler" onclick="myfun();" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="d-md-block d-none">
+                <ul class="navbar-nav ml-auto text-center">
+                    <li class="nav-item  ">
+                        <a class="nav-link mr-4" href="" id="one" data-toggle="modal" data-target="#exampleModal">تواصل
+                            معنا
+                        </a>
+                    </li>
+
+                    <li class="nav-item active ">
+                        <a class="nav-link mr-4 "  href="#" id="one">المطاعم
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mr-4" href="rooms.html" id="one">الغرف
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-4" href="about.html">حول</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-4" href="Hotel.html">الرئيسية</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto text-center">
+                    <li class="nav-item active">
+                        <a class="nav-link mr-4" href="Hotel.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mr-4" href="rooms.html" id="one">الغرف
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mr-4" href="#" id="one">المطاعم
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-4" href="about.html">حول</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-4" href="" data-toggle="modal" data-target="#exampleModal">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+                        <h1>المطاعم</h1>
+                        <span class="subheading">استمتع انت والعائلة بأفخر المطاعم</span>
+                        <ol class="breadcrumb bg-transparent justify-content-center" style="font-size: larger;">
+                            <li class="breadcrumb-item"><a  style="color: #e3ac22;" href="Hotel.html">الرئيسية</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">المطاعم</li>
+                        </ol>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5">
+                        <img class="img-fluid rounded-circle lazyload" src="img_placeholder5.jpg"
+                            data-src="https://images.unsplash.com/photo-1541086095944-f4b5412d3666?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-3">
+                        <h1 class="mb-3">اشهى المأكولات خصيصاً لك</h2>
+                        <p>استمتع انت وعائلتك بأفخر المطاعم والمأكولات المقدمة من امهر الطهات</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-block compact-gallery jumbotron">
+            <div class="text-center">
+                <h1 class="section-heading text-uppercase font-weight-lighter my-4 ">انواع الوجبات</h1>
+                <hr style="    width: 50px;
+                    background-color: #e3ac22;
+                    height: 3px;
+                    margin-top: -10px;" class="mb-4">
+            </div>
+            <div class="input-group col-md-7 mx-auto mb-2">
+                            <button class="btn btn-success" type="submit" onclick="SearchItems();">ابحث</button>
+                <input class="form-control ml-sm-2 text-right" type="text" placeholder="ادخل صنف الوجبة المفضلة عندك" id="searchbox">
+                
+            </div>
+            <div class="text-center my-2">
+            <div class="btn-group btn-group-toggle text-center " data-toggle="buttons">
+                
+                <label class="btn btn-dark" onclick="filterSelection('نباتية')">
+                    <input type="radio"  name="options" id="option2" autocomplete="off"  >
+                     نباتية
+                </label>
+                <label class="btn btn-dark" onclick="filterSelection('حيوانية')">
+                    <input type="radio"  name="options" id="option3" autocomplete="off"> حيوانية
+                </label>
+                <label class="btn btn-dark" onclick="filterSelection('بحرية')">
+                    <input type="radio" name="options" id="option4" autocomplete="off"> بحرية
+                </label>
+                <label class="btn btn-dark active " onclick="filterSelection('الجميع')">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked> الجميع
+                </label>
+            </div>
+            </div>
+            <div class="container">
+            <div class="row no-gutters" id="items">
+                <div class="col-md-6 col-lg-4 item zoom-on-hover بحرية">
+                    <a class="lightbox" href="https://images.unsplash.com/photo-1564130236985-d1050b19996b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80">
+                        <img class="img-fluid image lazyload" src="img_placeholder5.jpg" data-src="https://images.unsplash.com/photo-1564130236985-d1050b19996b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80">
+                        <span class="description">
+                            <span class="description-heading" id="desch" style="font-size: 25px;">مأكولات بحرية</span>
+                            <span class="description-body" style="font-size:17px;">سمك فيليه شهي وطازج</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover نباتية">
+                    <a class="lightbox" href="https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80">
+                        <img class="img-fluid image lazyload" src="img_placeholder5.jpg"data-src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80">
+                        <span class="description">
+                            <span class="description-heading" id="desch" style="font-size: 25px;">مأكولات نباتية</span>
+                            <span class="description-body" style="font-size:17px;">سمك فيليه شهي وطازج</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover حيوانية">
+                    <a class="lightbox"
+                        href="https://images.unsplash.com/photo-1580980906245-af3b357dcc84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80">
+                        <img class="img-fluid image lazyload" src="img_placeholder5.jpg"
+                            data-src="https://images.unsplash.com/photo-1580980906245-af3b357dcc84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80">
+                        <span class="description">
+                            <span class="description-heading" id="desch" style="font-size: 25px;">مأكولات حيوانية</span>
+                            <span class="description-body" style="font-size:17px;"> لحم احمر شهي وطازج</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <img class="img-fluid rounded-circle lazyload"  scr="img_placeholder5" data-src="https://images.unsplash.com/photo-1571320659999-624b278ade43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=801&q=80">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <h1 class="mb-3">افخر المشروبات المقدمة من اشهر الشركات</h2>
+                            <p>استمتع بشرب المشروبات الخاصة بك انت وعائلتك</p>
+                            <button type="button" class="btn" style="background-color: #e3ac22;" data-toggle="modal"
+                                data-target=".bd-example-modal-lg">المزيد من المعلومات</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+    
+                    <button type="button" class="btn text-left float-left" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" style="color: #e3ac22;">المشوربات</h5>
+    
+                </div>
+                <div class="modal-body ">
+                    <div class="container">
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        </p>
+                        <img src="img_placeholder5.jpg" data-src="https://images.unsplash.com/photo-1571320659999-624b278ade43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=801&q=80"
+                            class="lazyload img-fluid pb-3" alt="">
+                        <p class="w-100">
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبينص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                            نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+    
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="call-to-action text-white text-center lazyload">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 mx-auto text-right d-md-block d-none">
+                    <h2 class="mb-4">عروض مميزة خصيصاً لك</h2>
+                    <p>اتطلع على الغرف واختر الغرف المناسبة لك</p>
+                </div>
+                <div class="col-xl-9 mx-auto d-block d-md-none">
+                    <h2 class="mb-4">عروض مميزة خصيصاً لك</h2>
+                    <p>اتطلع على الغرف واختر الغرف المناسبة لك</p>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-12 mx-auto ">
+                    <form>
+                        <div class="form-row ">
+                            <div class="col-12 col-md-2">
+                                <button type="submit" class="btn btn-block btn-lg btn-primary">احجز الان</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-block grid-gallery">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="section-heading text-uppercase font-weight-lighter mb-4">معرض الصور</h1>
+                <hr style="    width: 50px;
+                background-color: #e3ac22;
+                height: 3px;
+                margin-top: -10px;" class="mb-4">
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-6 col-lg-3 item col-sm-4">
+                    <a class="lightbox"
+                        href="https://images.unsplash.com/photo-1553653924-39b70295f8da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+                        <img class="img-fluid image scale-on-hover lazyload" src="img_placeholder5.jpg"
+                            data-src="https://images.unsplash.com/photo-1553653924-39b70295f8da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3 item">
+                    <a class="lightbox"
+                        href="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80">
+                        <img class="img-fluid image scale-on-hover lazyload" src="img_placeholder5.jpg"
+                            data-src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3 item col-sm-4">
+                    <a class="lightbox"
+                        href="https://images.unsplash.com/photo-1553653924-39b70295f8da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+                        <img class="img-fluid image scale-on-hover lazyload" src="img_placeholder5.jpg"
+                            data-src="https://images.unsplash.com/photo-1553653924-39b70295f8da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3 item col-sm-4">
+                    <a class="lightbox"
+                        href="https://images.unsplash.com/photo-1553653924-39b70295f8da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+                        <img class="img-fluid image scale-on-hover lazyload" src="img_placeholder5.jpg"
+                            data-src="https://images.unsplash.com/photo-1553653924-39b70295f8da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3 item">
+                    <a class="lightbox"
+                        href="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80">
+                        <img class="img-fluid image scale-on-hover lazyload" src="img_placeholder5.jpg"
+                            data-src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3 item col-sm-4">
+                    <a class="lightbox"
+                        href="https://images.unsplash.com/photo-1553653924-39b70295f8da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+                        <img class="img-fluid image scale-on-hover lazyload" src="img_placeholder5.jpg"
+                            data-src="https://images.unsplash.com/photo-1553653924-39b70295f8da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3 item col-sm-4">
+                    <a class="lightbox"
+                        href="https://images.unsplash.com/photo-1553653924-39b70295f8da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+                        <img class="img-fluid image scale-on-hover lazyload" src="img_placeholder5.jpg"
+                            data-src="https://images.unsplash.com/photo-1553653924-39b70295f8da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3 item">
+                    <a class="lightbox"
+                        href="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80">
+                        <img class="img-fluid image scale-on-hover lazyload" src="img_placeholder5.jpg"
+                            data-src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+        
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">تواصل معنا</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5>موقع الفندق</h5>
+                    <p>دمشق شرقي التجارة جانب مشفى المدينة</p>
+                    <h5>رقم الهاتف</h5>
+                    <P>0114425445</P>
+                    <p>لا تتردد بإرسال رسالة بحال كان لديك مشكلة
+                    <p>
+
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">:الاسم</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">:المشكلة</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="footer" style=" padding: 40px 0;">
+        <div class="container">
+            <div class="row text-center text-xs-center text-sm-left text-md-left ">
+                <div class="col-xs-12 col-sm-4 col-md-4 my-sm-4">
+                    <h5>روابط</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>حول فندق اوركيد</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>الغرف الخاص بنا</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>معرض الصور</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>الخدمات</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 text-white  my my-md-4">
+                    <h5>الاستعلامات</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li>tel:0934432432
+                        </li>
+
+                        <li>email:orchidhotel@gmail.com
+                        </li>
+                        <li><button class="btn btn-success" data-toggle="modal" data-target="#exampleModal">ارسل
+                                رسالة</button></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 text-white my-md-4">
+                    <h5>موقع الفندق</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li>Damascus,Syria,altegara,
+                            <br>
+                        <li>near almadina hospital
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-1 mt-sm-5">
+                    <ul class="list-unstyled list-inline social text-center">
+                        <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i
+                                    class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i
+                                    class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i
+                                    class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i
+                                    class="fa fa-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02" target="_blank"><i
+                                    class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p class="h6">© All right Reversed.<a class="text-green ml-2" href="#"
+                            target="_blank">OrchidHotel</a></p>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </section>
+    <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i
+            class="fas fa-chevron-up"></i></a>
+
+
+    <!--Rooms Modals-->
+    <!--modal for room one-->
+    <div class="modal fade room_one" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="btn text-left float-left" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" style="color: #e3ac22;">ملحقات الغرفة</h5>
+
+                </div>
+                <div class="modal-body ">
+                    <div class="container">
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                        </p>
+                        <img src="img_placeholder5.jpg" data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg"
+                            class="lazyload img-fluid pb-3" alt="">
+                        <p class="w-100">
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبينص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                            نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal for room two-->
+    <div class="modal fade room_two" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="btn text-left float-left" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" style="color: #e3ac22;">ملحقات الغرفة</h5>
+
+                </div>
+                <div class="modal-body ">
+                    <div class="container">
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                        </p>
+                        <img src="img_placeholder5.jpg" data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg"
+                            class="lazyload img-fluid pb-3" alt="">
+                        <p class="w-100">
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبينص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                            نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal for room three-->
+    <div class="modal fade room_three" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="btn text-left float-left" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" style="color: #e3ac22;">ملحقات الغرفة</h5>
+
+                </div>
+                <div class="modal-body ">
+                    <div class="container">
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                        </p>
+                        <img src="img_placeholder5.jpg" data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg"
+                            class="lazyload img-fluid pb-3" alt="">
+                        <p class="w-100">
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبينص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                            نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal for room four-->
+    <div class="modal fade room_four" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="btn text-left float-left" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" style="color: #e3ac22;">ملحقات الغرفة</h5>
+
+                </div>
+                <div class="modal-body ">
+                    <div class="container">
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                        </p>
+                        <img src="img_placeholder5.jpg" data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg"
+                            class="lazyload img-fluid pb-3" alt="">
+                        <p class="w-100">
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبينص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                            نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal for room five-->
+    <div class="modal fade room_five" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="btn text-left float-left" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" style="color: #e3ac22;">ملحقات الغرفة</h5>
+
+                </div>
+                <div class="modal-body ">
+                    <div class="container">
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                        </p>
+                        <img src="img_placeholder5.jpg" data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg"
+                            class="lazyload img-fluid pb-3" alt="">
+                        <p class="w-100">
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبينص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                            نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal for room six-->
+    <div class="modal fade room_six" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="btn text-left float-left" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" style="color: #e3ac22;">ملحقات الغرفة</h5>
+
+                </div>
+                <div class="modal-body ">
+                    <div class="container">
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                        </p>
+                        <img src="img_placeholder5.jpg" data-src="edvin-johansson-rlwE8f8anOc-unsplash.jpg"
+                            class="lazyload img-fluid pb-3" alt="">
+                        <p class="w-100">
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبينص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                            تجريبي
+                            نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+                        <p class="w-100">
+                            اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد اوركيد ر اوركيد اوركيد اوركيد
+                            اوركيداوركيد
+                        </p>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyloadImages;
+
+            if ("IntersectionObserver" in window) {
+                lazyloadImages = document.querySelectorAll(".lazyload");
+                var imageObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            var image = entry.target;
+                            image.src = image.dataset.src;
+                            image.classList.remove("lazyload");
+                            imageObserver.unobserve(image);
+                        }
+                    });
+                });
+
+                lazyloadImages.forEach(function (image) {
+                    imageObserver.observe(image);
+                });
+            } else {
+                var lazyloadThrottleTimeout;
+                lazyloadImages = document.querySelectorAll(".lazyload");
+
+                function lazyload() {
+                    if (lazyloadThrottleTimeout) {
+                        clearTimeout(lazyloadThrottleTimeout);
+                    }
+
+                    lazyloadThrottleTimeout = setTimeout(function () {
+                        var scrollTop = window.pageYOffset;
+                        lazyloadImages.forEach(function (img) {
+                            if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                                img.src = img.dataset.src;
+                                img.classList.remove('lazyload');
+                            }
+                        });
+                        if (lazyloadImages.length == 0) {
+                            document.removeEventListener("scroll", lazyload);
+                            window.removeEventListener("resize", lazyload);
+                            window.removeEventListener("orientationChange", lazyload);
+                        }
+                    }, 20);
+                }
+
+                document.addEventListener("scroll", lazyload);
+                window.addEventListener("resize", lazyload);
+                window.addEventListener("orientationChange", lazyload);
+            }
+        })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.compact-gallery', { animation: 'slideIn' });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+    <script>
+        $('.navbar-nav>li>a').on('click', function () {
+            if (!$(this).hasClass('dropdown-toggle'))
+                $('.navbar-collapse').removeClass('show');
+            else {
+                $(".dropdown-menu a").click(function () {
+                    $(this).closest(".dropdown-menu").removeClass('show');
+                    $('.navbar-collapse').removeClass('show');
+                });
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
